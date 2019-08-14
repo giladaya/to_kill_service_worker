@@ -17,8 +17,8 @@ self.addEventListener("fetch", ev => {
   console.log(`SW v${VER} fetch event`);
 });
 
-self.addEventListener("notification", ev => {
-  console.log(`SW v${VER} notification event`);
+self.addEventListener("push", ev => {
+  console.log(`SW v${VER} push event`);
 });
 
 self.addEventListener("sync", ev => {

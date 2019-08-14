@@ -2,6 +2,7 @@ const VER = '0.0.1';
 console.log(`Hello from service worker v${VER}`);
 
 self.addEventListener("install", function(e) {
+  console.log(`SW v${VER} install event`);
   e.waitUntil(
     caches.open("sw-cache").then(function(cache) {
       console.log("Caching all the things!");

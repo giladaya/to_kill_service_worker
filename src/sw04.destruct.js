@@ -2,6 +2,9 @@
 // also see: https://github.com/NekR/self-destroying-sw
 // remember to remove registration code!
 
+const VER = '0.4.1';
+console.log(`Hello from service worker v${VER}`);
+
 const DIRTY_CACHE_NAME = "sw-cache";
 
 self.addEventListener("install", () => {
@@ -13,7 +16,7 @@ self.addEventListener("install", () => {
 
 self.addEventListener("activate", event => {
   // Unregister self
-  self.registration.unregister();
+  self.registration.unregister().then(() => console.log('Unregistered'));
   // Now clear caches
   event.waitUntil(
     caches

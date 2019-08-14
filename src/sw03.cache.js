@@ -1,4 +1,4 @@
-const VER = '0.0.1';
+const VER = '0.3.1';
 console.log(`Hello from service worker v${VER}`);
 
 self.addEventListener("install", function(e) {

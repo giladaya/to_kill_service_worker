@@ -1,11 +1,10 @@
 {
   "name": "to_kill_service_worker",
   "version": "1.0.0",
-  "description": "",
+  "description": "Resources for a talk",
   "main": "index.js",
   "scripts": {
     "start": "http-server src -p 8082",
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Gilad Dayagi",
   "license": "ISC",

@@ -4,7 +4,7 @@
   "description": "Resources for a talk",
   "main": "index.js",
   "scripts": {
-    "start": "http-server src -p 8082",
+    "start": "http-server src -p 8082"
   },
   "author": "Gilad Dayagi",
   "license": "ISC",

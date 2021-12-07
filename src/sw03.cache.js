@@ -1,22 +1,21 @@
-const VER = '0.3.1';
+const VER = "0.3.1";
 console.log(`Hello from service worker v${VER}`);
 
-self.addEventListener("install", function(e) {
+const CACHE_URLS = ["/", "/index.html"];
+
+self.addEventListener("install", function (e) {
   console.log(`SW v${VER} install event`);
   e.waitUntil(
-    caches.open("sw-cache").then(function(cache) {
+    caches.open("sw-cache").then(function (cache) {
       console.log("Caching all the things!");
-      return cache.addAll([
-        "/",
-        "/index.html",
-      ]);
+      return cache.addAll(CACHE_URLS);
     })
   );
 });
 
-self.addEventListener("fetch", function(event) {
+self.addEventListener("fetch", function (event) {
   event.respondWith(
-    caches.match(event.request).then(function(response) {
+    caches.match(event.request).then(function (response) {
       if (response) {
         console.log(`Fetching ${event.request.url} from cache`);
         return response;

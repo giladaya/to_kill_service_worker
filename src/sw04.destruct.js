@@ -1,5 +1,6 @@
 // source: https://github.com/NekR/self-destroying-sw
 // also see: https://novemberfive.co/blog/mess-up-service-workers-caching-gotcha
+
 // remember to remove registration code!
 
 const VER = "0.4.1";
